@@ -1,1 +1,21 @@
-bbbbbbbbbbbbbbbbbbbb
+<?
+	echo ip2long("1.64.94.23");
+?>
+
+
+
+
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
+<script>
+	function aaa(){
+	     daum.postcode.load(function(){
+	        new daum.Postcode({
+	            oncomplete: function(data) {
+	                console.log(data);
+	                document.getElementById("postcode").innerHTML=data.postcode;
+	                document.getElementById("address").innerHTML=data.address;
+	            }
+	        }).open();
+	    });
+	}
+</script>
