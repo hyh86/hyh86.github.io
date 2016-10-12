@@ -28,7 +28,7 @@
 		.anchor { z-index: 10; position: fixed; right: 100px; top: 100px; }
 		.anchor a { color: #fff; font-size: 20px; font-family: Tahoma; }
 	</style>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 </head>
 <body>
 	<div class="anchor">
@@ -49,15 +49,15 @@
 	<div id="s5" class="s s5">
 	</div>
 	<script type="text/javascript">
-		_body_h = $(window).height();
-		$('.s').height(_body_h);
-		$(window).resize(function(){
-			_h = $(window).height();
-			$('.s').height(_h);
+		_body_h = jQuery(window).height();
+		jQuery('.s').height(_body_h);
+		jQuery(window).resize(function(){
+			_h = jQuery(window).height();
+			jQuery('.s').height(_h);
 		});
-		$('.anchor a').click(function(){
-			_top = $($(this).attr('href')).offset().top;
-			$('html,body').stop().animate({scrollTop: _top}, 500);
+		jQuery('.anchor a').click(function(){
+			_top = jQuery(jQuery(this).attr('href')).offset().top;
+			jQuery('html,body').stop().animate({scrollTop: _top}, 500);
 			return false
 		});
 	</script>
